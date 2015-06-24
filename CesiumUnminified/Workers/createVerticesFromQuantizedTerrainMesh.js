@@ -1744,6 +1744,14 @@ define('Core/Cartesian2',[
     };
 
     /**
+     * @private
+     */
+    Cartesian2.equalsArray = function(cartesian, array, offset) {
+        return cartesian.x === array[offset] &&
+               cartesian.y === array[offset + 1];
+    };
+
+    /**
      * Compares the provided Cartesians componentwise and returns
      * <code>true</code> if they pass an absolute or relative tolerance test,
      * <code>false</code> otherwise.
@@ -2491,6 +2499,15 @@ define('Core/Cartesian3',[
                (left.x === right.x) &&
                (left.y === right.y) &&
                (left.z === right.z));
+    };
+
+    /**
+     * @private
+     */
+    Cartesian3.equalsArray = function(cartesian, array, offset) {
+        return cartesian.x === array[offset] &&
+               cartesian.y === array[offset + 1] &&
+               cartesian.z === array[offset + 2];
     };
 
     /**
