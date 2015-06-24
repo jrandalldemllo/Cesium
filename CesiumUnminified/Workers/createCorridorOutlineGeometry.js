@@ -20593,7 +20593,7 @@ define('Core/PolylineVolumeGeometryLibrary',[
             Cartesian3.subtract(backward, backwardProjection, backwardProjection);
             Cartesian3.normalize(backwardProjection, backwardProjection);
 
-            var doCorner = !CesiumMath.equalsEpsilon(Math.abs(Cartesian3.dot(forwardProjection, backwardProjection)), 1.0, CesiumMath.EPSILON1);
+            var doCorner = !CesiumMath.equalsEpsilon(Math.abs(Cartesian3.dot(forwardProjection, backwardProjection)), 1.0, CesiumMath.EPSILON7);
 
             if (doCorner) {
                 cornerDirection = Cartesian3.cross(cornerDirection, surfaceNormal, cornerDirection);
@@ -20902,7 +20902,7 @@ define('Core/CorridorGeometryLibrary',[
             Cartesian3.subtract(backward, backwardProjection, backwardProjection);
             Cartesian3.normalize(backwardProjection, backwardProjection);
 
-            var doCorner = !CesiumMath.equalsEpsilon(Math.abs(Cartesian3.dot(forwardProjection, backwardProjection)), 1.0, CesiumMath.EPSILON1);
+            var doCorner = !CesiumMath.equalsEpsilon(Math.abs(Cartesian3.dot(forwardProjection, backwardProjection)), 1.0, CesiumMath.EPSILON7);
 
             if (doCorner) {
                 cornerDirection = Cartesian3.cross(cornerDirection, normal, cornerDirection);
